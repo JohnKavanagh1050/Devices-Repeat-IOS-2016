@@ -17,7 +17,6 @@ function main()
 	setupCanvas() ;
 	setupTouch();
 	update();
-
 }
 
 function setupTouch()
