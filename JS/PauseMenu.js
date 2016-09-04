@@ -9,23 +9,15 @@ PauseMenu.prototype = Object.create(Scene.prototype); //this inherits from Scene
 
 PauseMenu.prototype.Init = function()
 {
-	var optionDiv = document.createElement("div");
-	var ImgDiv = document.createElement("div");
+	var resumeDiv = document.createElement("div");
 	var MainMenuDiv = document.createElement("div");
-	
-	var PauseButton = document.createElement("img");
-	PauseButton.setAttribute("src", "MainMenuScene/Pause_Button.png");
-	PauseButton.setAttribute("value", "Play Again");
-	PauseButton.setAttribute("id", "play-again");
-    PauseButton.setAttribute("align", "left");
-	ImgDiv.appendChild(PauseButton);
 
-	var optionButton = document.createElement("img");
-	optionButton.setAttribute("src", "MainMenuScene/Resume_Button.png");
-	optionButton.setAttribute("value", "Play Again");
-	optionButton.setAttribute("id", "play-again");
-	optionButton.setAttribute("align", "middle");
-	optionDiv.appendChild(optionButton);
+	var resumeButton = document.createElement("img");
+	resumeButton.setAttribute("src", "PauseMenuScene/Resume_Button.png");
+	resumeButton.setAttribute("value", "Play Again");
+	resumeButton.setAttribute("id", "play-again");
+	resumeButton.setAttribute("align", "middle");
+	resumeDiv.appendChild(resumeButton);
 
 	var MainMenuButton = document.createElement("img");
 	MainMenuButton.setAttribute("src", "MainMenuScene/Menu_Button.png");
@@ -34,20 +26,17 @@ PauseMenu.prototype.Init = function()
 	MainMenuButton.setAttribute("align", "middle");
 	MainMenuDiv.appendChild(MainMenuButton);
 
-	this.sceneDiv.appendChild(ImgDiv);
-	this.sceneDiv.appendChild(optionDiv);
+	this.sceneDiv.appendChild(resumeDiv);
 	this.sceneDiv.appendChild(MainMenuDiv);
 
-	optionButton.addEventListener("click", function(evt)
+	resumeButton.addEventListener("click", function(evt)
 	{
-
 		sceneManager.GoToScene(1);
 
 	}, false);
 
 	MainMenuButton.addEventListener("click", function(evt)
 	{
-
 		sceneManager.GoToScene(0);
 
 	}, false);

@@ -3,9 +3,7 @@ function Player(x, y, filename)
 	this.x = x;
 	this.y = y;
 	this.velo = [0,0];
-	this.originX = 50;
-	this.originY = 50;
-	this.radius = 50;
+	this.radius = 300;
 	this.img = new Image();
 	this.img.src = filename;
 	this.endPointX;

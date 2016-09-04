@@ -20,16 +20,6 @@ function main()
 
 }
 
-function loadLevel(jsondata)
-{
-	sceneManager = new SceneManager(jsondata);
-	sceneManager.CurrentScene().Update();
-	
-	setupCanvas();
-	setupTouch();
-	update();
-}
-
 function setupTouch()
 {
 	if(touchable) 

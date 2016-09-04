@@ -5,8 +5,6 @@ function SceneMenu()
 	isStart = false;
 	this.title = "Menu";
 	this.init = false;
-	//this.buttonGame = new button("gameTitle",game.canvas.width/2-232.5,200,475,175,game.ctx);
-	//this.buttonOption = new button("playButton",game.canvas.width/2-132.5,400,275,75,game.ctx)
 	this.cursorX;
 	this.cursorY;
 	this.Setup();
@@ -39,9 +37,7 @@ SceneMenu.prototype.Init = function()
 	//this.sceneDiv.style.display = "none";
 	optionButton.addEventListener("click", function(evt)
 	{
-
 		sceneManager.GoToScene(1);
-
 	}, false);
 }
 
@@ -60,12 +56,7 @@ SceneMenu.prototype.Update = function()
     {	
 		for(var i=0; i<touches.length; i++)
 		{
-			//alert("sdsds")
 			var touch = touches[i]; 
-			//if(touch.clientX !== -111111)
-			//{
-			//	alert("ahhh");
-			//}
 		}
 	}
 }
@@ -76,7 +67,6 @@ function printMousePos(e) {
 
 SceneMenu.prototype.Start = function()
 {
-	
 	this.sceneDiv.style.display = "block";
 }
 SceneMenu.prototype.Stop = function()

@@ -6,19 +6,19 @@ function GameScene()
 	this.title = "Playing";
 	this.init = false;
 
-	this.pickupArr = [];
-	this.playerOne = new Player(0,0,"GameScene/Meteor.png");
-								
+
+	this.playerOne = new Player(300,400,"GameScene/ninja1.png");				
 
 	this.collManager = new CollisionManager();
-						 
-	
+						
 	this.Setup();
 }
 
 GameScene.prototype.Init = function()
 {
 	var ImgDiv = document.createElement("div");
+
+	var background
 
 	var PauseButton = document.createElement("img");
 	PauseButton.setAttribute("src", "MainMenuScene/Pause_Button.png");
